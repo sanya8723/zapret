@@ -587,7 +587,7 @@ static uint8_t tvb_get_varint(const uint8_t *tvb, uint64_t *value)
 		return 8;
 	}
 	// impossible case
-	if (*value) *value = 0;
+	if (value) *value = 0;
 	return 0;
 }
 static uint8_t tvb_get_size(uint8_t tvb)
